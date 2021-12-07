@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="nave_list_action">
+            <field name="name">Naves</field>
+            <field name="res_model">mision.nave_espacial</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Crear el primer nave
+                </p>
+            </field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="mision_list_action">
+            <field name="name">Misions</field>
+            <field name="res_model">mision.mision_espacial</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Crear la primera mision
+                </p>
+            </field>
+        </record>
+        
+        
+        <menuitem name="Odoo Nave" id="menu_nave" sequence="1"/>
+        
+        <menuitem id="menu_nave_sub" name="Odoo Nave"  parent="menu_nave"  sequence="2"/>
+        
+        <menuitem id="menu_nave_courses" name="Nave"  parent="menu_nave_sub"  sequence="3" 
+                  action="nave_list_action"/>
+        
+        <menuitem id="menu_mision_courses" name="Mision"  parent="menu_nave_sub"  sequence="4" 
+                  action="mision_list_action"/>
+        
+        
+    </data>
+</odoo>

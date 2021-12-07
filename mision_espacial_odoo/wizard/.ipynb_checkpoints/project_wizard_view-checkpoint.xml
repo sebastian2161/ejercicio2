@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="mision_project_wizard_form_view">
+            <field name="name">mision.project.wizard.form</field>
+            <field name="model">mision.project.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Create Project For Mision">
+                    <group>
+                        <field name="mision_id"/>
+                        <field name="projecto"/>
+                        <field name="email"/>
+                    </group>
+                    
+                    <footer>
+                        <button name="create_project" type="object"
+                                string="Create" class="oe_highlight"/>
+                        
+                        or
+                        <button special="cancel" string="Cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        
+        <act_window id="launch_project_wizard"
+                    name="Create Project"
+                    binding_model="mision.mision_espacial"
+                    res_model="mision.project.wizard"
+                    view_mode="form"
+                    target="new"/>
+        
+    </data>
+</odoo>

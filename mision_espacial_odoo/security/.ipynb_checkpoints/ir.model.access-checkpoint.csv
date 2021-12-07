@@ -1,0 +1,6 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+nave_admin,nave admin,model_mision_nave_espacial,group_nave_admin,1,1,1,1
+nave_read_all,nave read all,model_mision_nave_espacial,,1,0,0,0
+mision_admin,mision admin,model_mision_mision_espacial,group_nave_admin,1,1,1,1
+mision_read_all,mision read all,model_mision_mision_espacial,,1,0,0,0
+access_mision_project_wizard,access mision project wizard,model_mision_project_wizard,group_nave_admin,1,1,1,1
