@@ -4,7 +4,9 @@ from odoo import http
 #from odoo import http
 #import xmlrpc, xmlrpc.client
 from xmlrpc import client
-import json
+import re
+import requests
+import werkzeug.urls
 
 
 
@@ -67,8 +69,8 @@ class Academy(http.Controller):
     def get_products(self, **kw):
         #xmlrpclib = xmlrpc.client
         
-        url = 'https://sebastian2161-ejercicio21-rama-v12-3748221.dev.odoo.com'
-        db = 'sebastian2161-ejercicio21-rama-v12-3748221'
+        url = 'https://sebastian2161-ejercicio21-rama-v12-3873200.dev.odoo.com'
+        db = 'sebastian2161-ejercicio21-rama-v12-3873200'
         username = 'admin'
         password = 'admin'
     
@@ -114,6 +116,17 @@ class Academy(http.Controller):
             return json.dumps({'products':res})
         except:
             return json.dumps({'Error':'Invalid Request'})
+        
+
+class externa(http.Controller):
+    @http.route('/restfulapi/api_externa', auth='none', website=False)
+    def api_externa(self, **kw):
+        
+        req = requests.get('https://jsonplaceholder.typicode.com/users', params=0)
+        return req.json()
+        #req.raise_for_status()
+        #parents_dict = req.json()
+        #return parents_dict
         
         
         
