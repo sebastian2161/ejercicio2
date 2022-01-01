@@ -164,10 +164,10 @@ class Academy(http.Controller):
             return json.dumps({'Error':'Invalid Request'})
         
 
-    @http.route('/restfulapi/api_externa', auth='none', website=True)
-    def api_externa(self, **kw):
+    #@http.route('/restfulapi/api_externa', auth='none', website=True)
+    #def api_externa(self, **kw):
         
-        return "Hola Mundo"
+    #    return "Hola Mundo"
         
         #req = requests.get('https://jsonplaceholder.typicode.com/users')
         #req = requests.get('https://sebastian2161-ejercicio21-demo-web-3894096.dev.odoo.com/restfulapi/get-products')
