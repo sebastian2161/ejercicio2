@@ -7,6 +7,9 @@ from xmlrpc import client
 import re
 import requests
 import werkzeug.urls
+import json
+
+CORS = '*'
 
 
 
@@ -45,11 +48,11 @@ class Academy(http.Controller):
     
     # End-Point que busca el id del usuario activo 
     @http.route('/restfulapi/login', auth='none', website=True)
-    def login(self, **kw):
+    def login01(self, **kw):
         #xmlrpclib = xmlrpc.client
         
-        url = 'https://sebastian2161-ejercicio21-rama-v12-3748221.dev.odoo.com'
-        db = 'sebastian2161-ejercicio21-rama-v12-3748221'
+        url = 'https://sebastian2161-ejercicio21-rama-v12-3904709.dev.odoo.com'
+        db = 'sebastian2161-ejercicio21-rama-v12-3904709'
         username = 'admin'
         password = 'admin'
          
@@ -62,6 +65,49 @@ class Academy(http.Controller):
             return json.dumps({'Error':'Invalid Request'})
         
     
+    # End-Point que busca el id del usuario activo 
+    @http.route('/restfulapi/login1', type='json', auth='none', cors=CORS)
+    def login02(self, db=None, login=None, password=None, **kw):
+        #xmlrpclib = xmlrpc.client
+        
+        url = 'https://sebastian2161-ejercicio21-rama-v12-3904709.dev.odoo.com'
+        db = db
+        username = login
+        password = password
+        
+        #return db
+         
+        common = client.ServerProxy('{}/xmlrpc/2/common'.format(url))
+        #print(common.version())
+        try:
+            uid = common.authenticate(db, username, password, {})
+            return json.dumps({'user_id':uid})
+        except:
+            return json.dumps({'Error':'Invalid Request'})
+        
+        
+        # End-Point que busca el id del usuario activo 
+    @http.route('/restfulapi/login2', auth='none', cors=CORS)
+    def login03(self, db=None, login=None, password=None, **kw):
+        #xmlrpclib = xmlrpc.client
+        
+        url = 'https://sebastian2161-ejercicio21-rama-v12-3904709.dev.odoo.com'
+        db = db
+        username = login
+        password = password
+        
+        #return db
+         
+        common = client.ServerProxy('{}/xmlrpc/2/common'.format(url))
+        #print(common.version())
+        try:
+            uid = common.authenticate(db, username, password, {})
+            return json.dumps({'user_id':uid})
+        except:
+            return json.dumps({'Error':'Invalid Request'})
+        
+        
+    
     
     
     # End-Point que lista todos los productos con sus precios.
@@ -69,8 +115,8 @@ class Academy(http.Controller):
     def get_products(self, **kw):
         #xmlrpclib = xmlrpc.client
         
-        url = 'https://sebastian2161-ejercicio21-rama-v12-3873200.dev.odoo.com'
-        db = 'sebastian2161-ejercicio21-rama-v12-3873200'
+        url = 'https://sebastian2161-ejercicio21-rama-v12-3904709.dev.odoo.com'
+        db = 'sebastian2161-ejercicio21-rama-v12-3904709'
         username = 'admin'
         password = 'admin'
     
@@ -118,12 +164,23 @@ class Academy(http.Controller):
             return json.dumps({'Error':'Invalid Request'})
         
 
-class externa(http.Controller):
-    @http.route('/restfulapi/api_externa', auth='none', website=False)
+    @http.route('/restfulapi/api_externa', auth='none', website=True)
     def api_externa(self, **kw):
         
-        req = requests.get('https://jsonplaceholder.typicode.com/users', params=0)
-        return req.json()
+        return "Hola Mundo"
+        
+        #req = requests.get('https://jsonplaceholder.typicode.com/users')
+        #req = requests.get('https://sebastian2161-ejercicio21-demo-web-3894096.dev.odoo.com/restfulapi/get-products')
+        #print(req.status_code)
+        #print(req.content)
+        #return req.content
+        #return req
+        #req.raise_for_status()
+        #parents_dict = req.json()
+        #return parents_dict
+        
+        #req = requests.get('https://jsonplaceholder.typicode.com/users', params=0)
+        #return req.json()
         #req.raise_for_status()
         #parents_dict = req.json()
         #return parents_dict
