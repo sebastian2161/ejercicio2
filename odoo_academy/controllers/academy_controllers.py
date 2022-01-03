@@ -70,7 +70,7 @@ class Academy(http.Controller):
     def login02(self, db=None, login=None, password=None, **kw):
         #xmlrpclib = xmlrpc.client
         
-        url = 'https://sebastian2161-ejercicio21-rama-v12-3904709.dev.odoo.com'
+        url = 'https://sebastian2161-ejercicio21-rama-v12-3910879.dev.odoo.com'
         db = db
         username = login
         password = password
@@ -91,7 +91,7 @@ class Academy(http.Controller):
     def login03(self, db=None, login=None, password=None, **kw):
         #xmlrpclib = xmlrpc.client
         
-        url = 'https://sebastian2161-ejercicio21-rama-v12-3904709.dev.odoo.com'
+        url = 'https://sebastian2161-ejercicio21-rama-v12-3910879.dev.odoo.com'
         db = db
         username = login
         password = password
@@ -115,8 +115,8 @@ class Academy(http.Controller):
     def get_products(self, **kw):
         #xmlrpclib = xmlrpc.client
         
-        url = 'https://sebastian2161-ejercicio21-rama-v12-3904709.dev.odoo.com'
-        db = 'sebastian2161-ejercicio21-rama-v12-3904709'
+        url = 'https://sebastian2161-ejercicio21-rama-v12-3910879.dev.odoo.com'
+        db = 'sebastian2161-ejercicio21-rama-v12-3910879'
         username = 'admin'
         password = 'admin'
     
