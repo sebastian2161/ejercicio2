@@ -1,7 +1,7 @@
 from xmlrpc import client
 
-url= 'https://sebastian2161-ejercicio2-rama-v12-3598634.dev.odoo.com'
-db= 'sebastian2161-ejercicio2-rama-v12-3598634'
+url= 'https://sebastian2161-ejercicio2-rama-v12-4028912.dev.odoo.com'
+db= 'sebastian2161-ejercicio2-rama-v12-4028912'
 username= 'admin'
 password= 'admin'
 
@@ -25,10 +25,10 @@ draft_quotes = models.execute_kw(db, uid, password,
 print(draft_quotes)
 
 
-if_confirmed = models.execute_kw(db, uid, password,
-                                'sale.order', 'action_confirm',
-                                [draft_quotes])
-print(if_confirmed)
+#if_confirmed = models.execute_kw(db, uid, password,
+#                                'sale.order', 'action_confirm',
+#                                [draft_quotes])
+#print(if_confirmed)
 
 #count= 0
 #for x in draft_quotes:
