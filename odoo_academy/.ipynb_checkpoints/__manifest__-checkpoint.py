@@ -27,6 +27,8 @@
         'report/session_report_template.xml',
         'views/prueba_web.xml',
         'views/academy_course_controllers.xml',
+        'views/todo_templates.xml',
+        'views/todo_extend.xml',
     ],
     'demo': [
         'demo/academy_demo.xml',
@@ -65,4 +67,6 @@
 # Manifiesto de hoy 12-11-2021
 # Manifiesto de hoy 14-11-2021
 # Manifiesto de hoy 14-11-2021
+# Manifiesto de hoy 22-11-2021
+# Manifiesto de hoy 22-11-2021
 # Manifiesto de hoy 22-11-2021

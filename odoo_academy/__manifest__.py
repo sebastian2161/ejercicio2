@@ -27,6 +27,8 @@
         'report/session_report_template.xml',
         'views/prueba_web.xml',
         'views/academy_course_controllers.xml',
+        'views/todo_templates.xml',
+        'views/todo_extend.xml',
     ],
     'demo': [
         'demo/academy_demo.xml',

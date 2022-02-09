@@ -26,6 +26,8 @@ class nave_espacial(models.Model):
     
     @api.constrains('ancho','largo')
     def _check_validation_(self):
+    ##consola.log('paso por aqui')
+        
         for record in self:
-            if self.ancho > self.largo:
+            if record.ancho > record.largo:
                 raise UserError('Ancho no puede ser mayor a largo en una Nave')
