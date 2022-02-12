@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data> 
-        <template id="hello_extended" inherit_id="odoo_academy.hello"> 
-           <!-- <t t-call="website.layout">-->
-            <xpath expr="//h1" position="replace"> 
+        <template id="hello_extended">
+            <xpath expr="//h1" position="after"> 
             <h1>
                 Hello <t t-esc="name or 'Someone'" />! 
            </h1> 
            </xpath> 
-            <!--</t>-->
         </template>
     </data>
 </odoo>

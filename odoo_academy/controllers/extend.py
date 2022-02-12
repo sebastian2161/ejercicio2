@@ -7,12 +7,13 @@ import requests
 import werkzeug.urls
 import json
  
-class TodoExtended(Todo): 
-    @http.route('/hola/<string:name>')
-    def hello(self, name=None, **kwargs): 
-        response = super(TodoExtended, self).hello() 
-        response.qcontext['name'] = name
-        return response
-        #return http.request.render('odoo_academy.hello_extended',{
-        #    'name': name,
-        #})
+#class TodoExtended(http.Controller): 
+    #@http.route()
+    #@http.route('/hola/<string:name>')
+#    def hello(self, name=None, **kwargs): 
+        #response = super(TodoExtended, self).hello() 
+        #response.qcontext['name'] = name
+        #return response
+#        return http.request.render('odoo_academy.hello_extended',{
+#            'name': name,
+#        })

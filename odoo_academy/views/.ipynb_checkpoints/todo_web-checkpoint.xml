@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data> 
+
+<template id="add"> 
+  <t t-call="website.layout"> 
+    <t t-set="additional_title">Usuarios</t> 
+    <div id="wrap" class="container"> 
+      <div class="row"> 
+        <section id="forms"> 
+          <form id="add" action="/website_form/" method="post" class="s_website_form container-fluid form-horizontal" 
+ data-model_name="res.users" data-success_page="/contactus-thank-you" enctype="multipart/form-data">   
+              
+<!-- Form fields will go here! -->
+<div class="form-group form-field"> 
+  <div class="col-md-3 col-sm-4 text-right"> 
+    <label class="control-label" for="name">To do</label> 
+  </div> 
+  <div class="col-md-7 col-sm-8"> 
+    <input name="name" type="text" required="True" class="o_website_from_input form-control" /> 
+  </div> 
+  <select id="cars" class="form-control">
+        <option t-att-value="volvo">Volvo</option>
+        <option t-att-value="saab">Saab</option>
+        <option t-att-value="vw">VW</option>
+    </select>
+</div>                
+              
+            <!-- Submit button --> 
+            <div class="form-group"> 
+              <div class="col-md-offset-3 col-md-7 col-sm-offset-4 col-sm-8"> 
+                <a class="o_website_form_send btn btn-primary btn-lg"> 
+                  Save 
+                </a> 
+              <!--<input type="button" class="btn" value="Submit" id="btnSubmit; insert" onclick="ddlValidate();" />-->
+                
+<span id="o_website_form_result"></span>
+              </div> 
+            </div> 
+         
+          </form> 
+<!--<script type="text/javascript">
+    function ddlValidate() {
+    var reg_name = document.forms['frm'].reg_name.value
+    
+    if(reg_name != ""){
+    document.forms["frm"].submit();
+     }
+     return true;
+   }
+</script> -->
+        </section> 
+      </div> <!-- rows --> 
+    </div> <!-- container --> 
+  </t> <!-- website.layout --> 
+</template>
+</data>
+</odoo>
+

@@ -14,7 +14,7 @@
     'website': 'https://www.odoo.com/',
     'category': 'Training',
     'version': '0.1',
-    'depends': ['sale','website'],
+    'depends': ['sale','website_form','website'],
     'data': [
         'security/academy_security.xml',
         'security/ir.model.access.csv',
@@ -29,6 +29,7 @@
         'views/academy_course_controllers.xml',
         'views/todo_templates.xml',
         'views/todo_extend.xml',
+        'views/todo_web.xml',
     ],
     'demo': [
         'demo/academy_demo.xml',
