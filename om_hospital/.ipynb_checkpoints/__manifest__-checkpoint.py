@@ -14,6 +14,7 @@
         'sale',
         'mail',
         'website_slides',
+        'website',
         'hr',
         'report_xlsx'
     ],
@@ -32,6 +33,7 @@
         'views/kids_view.xml',
         'views/patient_gender_view.xml',
         'views/sale.xml',
+        'views/website_form.xml',
         'report/patient_details_template.xml',
         'report/patient_card.xml',
         'report/report.xml'
@@ -48,3 +50,12 @@
 #update #25-09-2021
 #update #27-09-2021
 #update #299-09-2021
+#update #299-09-2021
+#update #299-09-2021
+#update #299-09-2021
+
+#update #`10-03-2021
+#update #`10-10-2021
+#update #`11-10-2021
+#update #`12-10-2021
+#update #`13-10-2021
