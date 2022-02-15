@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <template id="assets_frontend" inherit_id="website.assets_frontend" name="website_form">
+         <xpath expr="." position="inside">
+              <script type="text/javascript" src="/om_hospital/static/src/js/javascript.js"></script>
+         </xpath>
+    </template>
 
     <template id="create_patient" name="Create Patient">
         <t t-call="website.layout">
@@ -13,11 +18,31 @@
                                 <input type="text" name="name" t-att-value="name" id="name"
                                        class="form-control" placeholder="e.g. John Doe" required="required"/>
                             </div>
+                            
+                            <div class="form-group">
+                                <label for="age" class="control-label">Age</label>
+                                <input type="number" name="age" t-att-value="age" id="age" minlength="1" maxlength="2" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" min="18" max="90"
+                                       class="form-control" required="required"/>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="gender" class="control-label">Gender</label>
+                                <select id="gender" class="form-control">
+                                    <option t-att-value="male">Male</option>
+                                    <option t-att-value="female">Female</option>
+                                    <option t-att-value="other">Other</option>
+                                </select>
+                                
+                            </div>
+                            
                             <!--<div class="form-group">
                                 <label for="email" class="control-label">Email</label>
                                 <input type="email" name="email_id" t-att-value="email_id" id="email_id"
                                        class="form-control" required="required"/>
-                            </div>
+                            </div>-->
+                                
+                         
+                         <!--   </div>
                             <div class="form-group">
                                 <label for="doctor_id" class="control-label">Doctor</label>
                                 <select name="doctor_id" class="form-control link-style">
@@ -27,7 +52,7 @@
                                 </select>
                             </div> -->
                             <div class="clearfix oe_login_buttons">
-                                <button type="submit" class="btn btn-primary pull-left">Create Patient</button>
+                                <button type="submit" id="boton" class="btn btn-primary pull-left">Create Patient</button>
                             </div>
                         </form>
                     </div>
