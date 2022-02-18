@@ -164,8 +164,37 @@ class Academy(http.Controller):
             return json.dumps({'Error':'Invalid Request'})
         
 
-    #@http.route('/restfulapi/api_externa', auth='none', website=True)
-    #def api_externa(self, **kw):
+    @http.route('/restfulapi/api_externa', auth='none', website=True)
+    def api_externa(self, **kw):
+        
+        url = 'https://jsonplaceholder.typicode.com/users/1'
+        
+        #data = {'params': {'users': 100}}
+        data = {'params': 0}
+        headers={'content-type':'application/json'}
+        resultado = requests.get(url, params=0)
+        res = json.loads(resultado.content)
+        
+        for r in res:
+            values ={
+               "id":res["id"],
+               "name":res["name"]
+            }
+        
+        return json.dumps(values)
+        
+        
+        
+        
+        
+        #a = http.request.jsonrequest('https://jsonplaceholder.typicode.com/users')
+        #return json.dumps({'products':a})
+        
+        #return {
+        #           "type": "ir.actions.act_url",
+        #           "url": "https://odoo.com",
+        #           "target": "self",
+        #       }
         
     #    return "Hola Mundo"
         
