@@ -167,7 +167,7 @@ class Academy(http.Controller):
     @http.route('/restfulapi/api_externa', auth='none', website=True)
     def api_externa(self, **kw):
         
-        url = 'https://jsonplaceholder.typicode.com/users/1'
+        url = 'https://jsonplaceholder.typicode.com/users/'
         
         #data = {'params': {'users': 100}}
         data = {'params': 0}
@@ -175,11 +175,19 @@ class Academy(http.Controller):
         resultado = requests.get(url, params=0)
         res = json.loads(resultado.content)
         
+        #values =[]
+        #values.append(res)
+        
+        #for r in res:
+        #        values ={
+        #            "id":res["id"],
+        #            "name":res["name"]
+        #        }
+        values = []
         for r in res:
-            values ={
-               "id":res["id"],
-               "name":res["name"]
-            }
+            values.append({"id":r["id"],"name":r["name"]})
+
+    #print(values)
         
         return json.dumps(values)
         
