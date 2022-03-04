@@ -4,3 +4,5 @@ from . import course
 from . import session
 from . import sale_order
 from . import product_template
+from . import pos_payment_method
+from . import pos_payment
