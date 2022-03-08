@@ -30,6 +30,8 @@
         'views/todo_templates.xml',
         'views/todo_extend.xml',
         'views/todo_web.xml',
+        'views/pos_payment_inherit.xml',
+        'views/pos_payment01_inherit.xml',
     ],
     'demo': [
         'demo/academy_demo.xml',
