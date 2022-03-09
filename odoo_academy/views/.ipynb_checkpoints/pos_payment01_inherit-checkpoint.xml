@@ -2,7 +2,7 @@
 
 <odoo>
     <data>
-        <record model="ir.ui.view" id="point_of_sale_view_pos_payment01_form_inherit">
+      <!--  <record model="ir.ui.view" id="point_of_sale_view_pos_payment01_form_inherit">
             <field name="name">point.of.sale.view.pos.payment01.form.inherit</field>
             <field name="model">pos.payment</field>
             <field name="inherit_id" ref="point_of_sale.view_pos_payment_form"/>
@@ -11,7 +11,7 @@
                     <field name="importe_tipo_metodo"/>
                 </field>
             </field>
-        </record>
+        </record> -->
         
        <record id="pos_payment_view_tree_inherit" model="ir.ui.view">
            <field name="name">pos.payment.tree.inherit</field>
@@ -19,8 +19,8 @@
            <field name="inherit_id" ref="point_of_sale.view_pos_payment_tree"/>
            <field name="arch" type="xml">
               <tree string="Payments">
-                <field name="importe_tipo_metodo" position="inside">
-                </field>
+                <field name="importe_tipo_metodo" sum="importe tipo metodo" widget="Monetary"></field>
+    
              </tree>
         </field>
     </record>
@@ -31,8 +31,7 @@
            <field name="inherit_id" ref="point_of_sale.view_pos_payment_search"/>
            <field name="arch" type="xml">
               <search string="Payments">
-                <field name="importe_tipo_metodo" position="inside">
-                </field>
+                <field name="importe_tipo_metodo" sum="importe tipo metodo" widget="Monetary"></field>
              </search>
         </field>
     </record>

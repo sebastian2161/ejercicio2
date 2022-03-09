@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="course_list_action">
+            <field name="name">Courses</field>
+            <field name="res_model">academy.course</field>
+            <field name="view_mode">tree,form,pivot</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Crear el primer curso
+                </p>
+            </field>
+        </record>
+        
+
+    <menuitem id="menu_patient_root"
+              name="Patients"
+              parent="menu_academy"
+              sequence="2"/>
+
+    <menuitem id="menu_patient"
+              name="Patients"
+              parent="menu_patient_root"
+              action="course_list_action"
+              sequence="2"/>
+
+    </data>
+</odoo>
