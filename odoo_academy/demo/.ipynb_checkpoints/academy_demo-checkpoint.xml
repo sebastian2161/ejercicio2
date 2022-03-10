@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record model="academy.course" id="erp_999">
+            <field name="name">ERP_101</field>
+            <field name="descripcion">Muy bueno</field>
+        </record>
+        
+        <record model="academy.course" id="account_99">
+            <field name="name">ERP_acounting</field>
+            <field name="descripcion">Muy Mala</field>
+        </record>
+    </data>
+</odoo>
