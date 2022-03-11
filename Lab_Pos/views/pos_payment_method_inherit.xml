@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="point_of_sale_view_pos_payment_form_inherit">
+            <field name="name">point.of.sale.view.pos.payment.form.inherit</field>
+            <field name="model">pos.payment.method</field>
+            <field name="inherit_id" ref="point_of_sale.pos_payment_method_view_form"/>
+            <field name="arch" type="xml">
+                <field name="split_transactions" position="after">
+                    <field name="importe_tipo_metodo"/>
+                </field>
+            </field>
+    </record>
+    
+    <record id="pos_payment_method_view_tree_inherit" model="ir.ui.view">
+        <field name="name">pos.payment.method.tree_inherit</field>
+        <field name="model">pos.payment.method</field>
+        <field name="inherit_id" ref="point_of_sale.pos_payment_method_view_tree"/>
+        <field name="arch" type="xml">
+            <tree string="Payment Methods">
+                <field name="importe_tipo_metodo" position="inside">
+                </field>
+            </tree>
+        </field>
+    </record>     
+    </data>
+</odoo>
