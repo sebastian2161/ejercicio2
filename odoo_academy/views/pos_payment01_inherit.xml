@@ -19,8 +19,7 @@
            <field name="inherit_id" ref="point_of_sale.view_pos_payment_tree"/>
            <field name="arch" type="xml">
               <tree string="Payments">
-                <field name="importe_tipo_metodo" sum="importe tipo metodo" widget="Monetary"></field>
-    
+                <field name="importe_tipo_metodo" sum="payment type amount" widget="Monetary"></field>
              </tree>
         </field>
     </record>
@@ -31,7 +30,7 @@
            <field name="inherit_id" ref="point_of_sale.view_pos_payment_search"/>
            <field name="arch" type="xml">
               <search string="Payments">
-                <field name="importe_tipo_metodo" sum="importe tipo metodo" widget="Monetary"></field>
+                <field name="importe_tipo_metodo" sum="payment type amount" widget="Monetary"></field>
              </search>
         </field>
     </record>
