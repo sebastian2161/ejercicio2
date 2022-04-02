@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+      <!--  <record model="ir.ui.view" id="point_of_sale_view_pos_payment01_form_inherit">
+            <field name="name">point.of.sale.view.pos.payment01.form.inherit</field>
+            <field name="model">pos.payment</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_payment_form"/>
+            <field name="arch" type="xml">
+                <field name="amount" position="after">
+                    <field name="importe_tipo_metodo"/>
+                </field>
+            </field>
+        </record> -->
+        
+       <record id="pos_payment_view_tree_inherit" model="ir.ui.view">
+           <field name="name">pos.payment.tree.inherit</field>
+           <field name="model">pos.payment</field>
+           <field name="inherit_id" ref="point_of_sale.view_pos_payment_tree"/>
+           <field name="arch" type="xml">
+              <tree string="Payments">
+                <field name="importe_tipo_metodo" sum="payment type amount" widget="Monetary"></field>
+             </tree>
+        </field>
+    </record>
+        
+    <record id="pos_payment_view_search_inherit" model="ir.ui.view">
+           <field name="name">pos.payment.search.inherit</field>
+           <field name="model">pos.payment</field>
+           <field name="inherit_id" ref="point_of_sale.view_pos_payment_search"/>
+           <field name="arch" type="xml">
+              <search string="Payments">
+                <field name="importe_tipo_metodo" sum="payment type amount" widget="Monetary"></field>
+             </search>
+        </field>
+    </record>
+        
+   <!-- <record model="ir.ui.view" id="pos_payment_view_pivot">
+            <field name="name">pos.payment.pivot.inherit</field>
+            <field name="model">pos.payment</field>
+            <field name="inherit_id" ref="point_of_sale.pos_payment_view_pivot"/>
+            <field name="arch" type="xml">
+                <pivot string="Payments">
+                    <field name="importe_tipo_metodo" type="measure"/>
+                </pivot>
+            </field>
+        </record> -->
+    </data>
+</odoo>
