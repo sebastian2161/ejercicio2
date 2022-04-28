@@ -25,6 +25,7 @@
         # 'data/slide_data_v12_2.xml',
         'data/slide_data_v13.xml',
         'data/slide_data_v14.xml',
+        'data/cron.xml',
         'wizard/create_appointment_view.xml',
         'wizard/search_appointment_view.xml',
         'views/patient_view.xml',

@@ -76,7 +76,26 @@ class HospitalPatient(models.Model):
         for rec in self:
             if rec.age == 0:
                 raise ValidationError(_("Age Cannot Be Zero .. !"))
-
+    
+    @api.model
+    def test_cron_job(self):
+        print("Abcd") # print will get printed in the log of pycharm
+        #res=self.env['product.product'].create({'name': 'Product02'})
+        #code accordingly to execute the cron
+        #return res
+        stock_location = self.env.ref('stock.stock_location_stock')
+        stock = self.env['stock.quant'].with_context(inventory_mode=True).create({'product_id': 759,
+                                                                                  'location_id':  8,
+                                                                                  'inventory_quantity': 2.0,})
+        
+        stock1 = self.env['stock.quant'].with_context(inventory_mode=True).create({'product_id': 759,
+                                                                                   'location_id': 14,
+                                                                                   'inventory_quantity': -2.0,})
+        
+    
+        
+        
+        
     def name_get(self):
         result = []
         for rec in self:
