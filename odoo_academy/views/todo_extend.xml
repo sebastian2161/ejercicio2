@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data> 
+        <template id="hello_extended">
+            <xpath expr="//h1" position="after"> 
+            <h1>
+                Hello <t t-esc="name or 'Someone'" />! 
+           </h1> 
+           </xpath> 
+        </template>
+    </data>
+</odoo>

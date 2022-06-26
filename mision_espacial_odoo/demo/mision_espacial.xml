@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record model="mision.nave_espacial" id="nave_01" >
+            <field name="name">nave_01</field>
+            <field name="descripcion">Buen Rendimiento</field>
+            <field name="level">Iniciando</field> 
+        </record>
+            
+            <record model="mision.nave_espacial" id="nave_02" >
+            <field name="name">Nave_02</field>
+            <field name="descripcion">Regular Rendimiento</field>
+            <field name="level">Avanzado</field> 
+        </record>
+    </data>
+</odoo>

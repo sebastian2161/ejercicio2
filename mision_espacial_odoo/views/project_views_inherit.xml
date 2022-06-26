@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="project_project_view_form_simplified_inherit_mision">
+            <field name="name">project.project.form.simplified.inherit.mision</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.project_project_view_form_simplified"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group" position="before">
+                    <label for="mision_id" class="oe_inline" string="Mision Proyecto"/>
+                    <field name="mision_id" class="oe_inline" placeholder="e.g. office-party"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <record id="group_nave_admin" model="res.groups">
+        <field name="name">Nave / Admin</field>
+    </record>
+    
+    <record id="only_active_delete" model="ir.rule">
+        <field name="name">No es posible eliminar</field>
+        <field name="perm_read" eval="0"/>
+        <field name="perm_write" eval="0"/>
+        <field name="perm_create" eval="0"/>
+        <field name="perm_unlink" eval="1"/>
+        <field name="domain_force">[('Tipo','=','1')]</field>
+        <field name="model_id" ref="model_mision_nave_espacial"/>
+    </record>
+</odoo>
